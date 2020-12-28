@@ -19,6 +19,8 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+// GitHub: https://github.com/Hirrolot/assert-algebraic.
+
 #ifndef ASSERT_ALGEBRAIC_H
 #define ASSERT_ALGEBRAIC_H
 
