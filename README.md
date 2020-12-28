@@ -90,4 +90,8 @@ To see the macro definitions, go to [`assert_algebraic.h`].
 | `ASSERT_RIGHT_ZERO(f, eq, z, x)` | [Zero element](https://en.wikipedia.org/wiki/Absorbing_element) (right) |
 | `ASSERT_ZERO(f, eq, z, x)` | [Zero element](https://en.wikipedia.org/wiki/Absorbing_element) (both left and right) |
 
+## Projects using assert-algebraic
+
+ - [Hirrolot/slice99](https://github.com/Hirrolot/slice99) -- Array slicing for C99.
+
 [`assert_algebraic.h`]: assert_algebraic.h
