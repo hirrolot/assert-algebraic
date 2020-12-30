@@ -77,7 +77,7 @@ To see the macro definitions, go to [`assert_algebraic.h`].
 | `ASSERT_SYMMETRIC(f, x, y)` | [Symmetricity](https://en.wikipedia.org/wiki/Symmetric_relation) |
 | `ASSERT_BIJECTIVE(f, inverse_f, eq, x)` | [Bijection](https://en.wikipedia.org/wiki/Bijection) |
 | `ASSERT_INVOLUTIVE(f, eq, x)` | [Involution](https://en.wikipedia.org/wiki/Involution_(mathematics)) |
-| `ASSERT_IDEMPOTENT(f, eq, x)` | [Idempotence](https://en.wikipedia.org/wiki/Idempotence) |
+| `ASSERT_IDEMPOTENT(f, eq, x)` | [~~Impotence~~ Idempotence](https://en.wikipedia.org/wiki/Idempotence) |
 | `ASSERT_COMMUTATIVE(f, eq, x, y)` | [Commutativity](https://en.wikipedia.org/wiki/Commutative_property) |
 | `ASSERT_ASSOCIATIVE(f, eq, x, y, z)` | [Associativity](https://en.wikipedia.org/wiki/Associative_property) |
 | `ASSERT_LEFT_DISTRIBUTIVE(f1, f2, eq, x, y, z)` | [Distributivity](https://en.wikipedia.org/wiki/Distributive_property) (left) |
