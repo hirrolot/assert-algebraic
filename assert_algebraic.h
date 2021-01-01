@@ -267,8 +267,8 @@
  * holds.
  */
 #define ASSERT_STRICT_TOTAL_ORDER(f, eq, x, y, z)                                                  \
-    ASSERT_TOTAL_ORDER(f, eq, x, y, z);                                                            \
-    assert(f(x, y) ^ f(y, x) ^ x == y);                                                            \
+    ASSERT_STRICT_PARTIAL_ORDER(f, x, y, z);                                                       \
+    ASSERT_SEMICONNEXIVE(f, eq, x, y);                                                             \
                                                                                                    \
     do {                                                                                           \
     } while (0)
