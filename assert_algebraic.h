@@ -274,11 +274,12 @@
     } while (0)
 
 /**
- * <a href="https://en.wikipedia.org/wiki/Total_order#Strict_total_order">Strict total order</a>: a
- * semiconnexive strict partial order.
+ * <a href="https://en.wikipedia.org/wiki/Total_order#Strict_total_order">Strict total order</a>: an
+ * asymmetric (hence irreflexive) transitive semiconnex relation.
  */
 #define ASSERT_STRICT_TOTAL_ORDER(f, eq, x, y, z)                                                  \
-    ASSERT_STRICT_PARTIAL_ORDER(f, x, y, z);                                                       \
+    ASSERT_ASYMMETRIC(f, x, y);                                                                    \
+    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \
     ASSERT_SEMICONNEXIVE(f, eq, x, y);                                                             \
                                                                                                    \
     do {                                                                                           \
