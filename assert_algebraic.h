@@ -275,8 +275,7 @@
 
 /**
  * <a href="https://en.wikipedia.org/wiki/Total_order#Strict_total_order">Strict total order</a>: a
- * non-strict total order for which exactly one of \f$f(x, y)\f$, \f$f(y, x)\f$, and \f$x = y\f$
- * holds.
+ * semiconnexive strict partial order.
  */
 #define ASSERT_STRICT_TOTAL_ORDER(f, eq, x, y, z)                                                  \
     ASSERT_STRICT_PARTIAL_ORDER(f, x, y, z);                                                       \
