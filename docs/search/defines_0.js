@@ -9,6 +9,7 @@ var searchData=
   ['assert_5fcommutative',['ASSERT_COMMUTATIVE',['../assert__algebraic_8h.html#af9eea6723af46e93330de07885d97c97',1,'assert_algebraic.h']]],
   ['assert_5fconnexive',['ASSERT_CONNEXIVE',['../assert__algebraic_8h.html#a477f97b35c75f648eb9c7b5a5a20af35',1,'assert_algebraic.h']]],
   ['assert_5fdistributive',['ASSERT_DISTRIBUTIVE',['../assert__algebraic_8h.html#ad72f60f636a145a9b409f4ba1f6de2d4',1,'assert_algebraic.h']]],
+  ['assert_5fequivalence',['ASSERT_EQUIVALENCE',['../assert__algebraic_8h.html#a2a2af7775349b1c503683ae48ca0e44f',1,'assert_algebraic.h']]],
   ['assert_5fidempotent',['ASSERT_IDEMPOTENT',['../assert__algebraic_8h.html#a5f64cc9542436e8477f8a72e430b93d6',1,'assert_algebraic.h']]],
   ['assert_5fidentity',['ASSERT_IDENTITY',['../assert__algebraic_8h.html#af1bad3d05e66f6b84e2f4ceb19e14f38',1,'assert_algebraic.h']]],
   ['assert_5fimplication',['ASSERT_IMPLICATION',['../assert__algebraic_8h.html#ab7cc62c783137ec523e197784a514a11',1,'assert_algebraic.h']]],

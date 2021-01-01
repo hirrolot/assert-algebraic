@@ -169,6 +169,18 @@
     } while (0)
 
 /**
+ * <a href="https://en.wikipedia.org/wiki/Equivalence_relation">Equivalence</a>: a relation that is
+ * reflexive, symmetric, and transitive.
+ */
+#define ASSERT_EQUIVALENCE(f, x, y, z)                                                             \
+    ASSERT_REFLEXIVE(f, x);                                                                        \
+    ASSERT_SYMMETRIC(f, x, y);                                                                     \
+    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \
+                                                                                                   \
+    do {                                                                                           \
+    } while (0)
+
+/**
  * <a href="https://en.wikipedia.org/wiki/Identity_element">Identity element (left)</a>: \f$f(e, x)
  * = x\f$.
  */

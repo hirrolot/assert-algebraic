@@ -4,7 +4,7 @@
 
 A set of macros to dynamically assert certain algebraic properties of regular C functions.
 
-[[ `examples/demo.c` ](examples/demo.c)] [ [Playground >>](https://godbolt.org/z/8h5Ebr) ]
+[[ `examples/demo.c` ](examples/demo.c)] [ [Playground >>](https://godbolt.org/z/Y377GY) ]
 
 ``` c
 #include <assert_algebraic.h>
@@ -26,6 +26,7 @@ int main(void) {
     ASSERT_REFLEXIVE(eq, 3);
     ASSERT_SYMMETRIC(eq, 4, 5);
     ASSERT_TRANSITIVE(eq, 6, 7, 8);
+    ASSERT_EQUIVALENCE(eq, 1, 1, 3);
 
     ASSERT_BIJECTIVE(id, id, eq, 123);
     ASSERT_INVOLUTIVE(neg, eq, 123);

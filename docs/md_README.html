@@ -74,58 +74,35 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p><a href="https://github.com/Hirrolot/assert-algebraic/actions"></a></p>
 <p>A set of macros to dynamically assert certain algebraic properties of regular C functions.</p>
-<p>[<a href="examples/demo.c"><code>examples/demo.c</code></a>] [ <a href="https://godbolt.org/z/8h5Ebr">Playground &gt;&gt;</a> ]</p>
-<div class="fragment"><div class="line">#include &lt;assert_algebraic.h&gt;</div><div class="line"></div><div class="line">#include &lt;stdbool.h&gt;</div><div class="line"></div><div class="line">static bool eq(int x, int y) { return x == y; }</div><div class="line">static bool lesser(int x, int y) { return x &lt; y; }</div><div class="line">static bool lesser_eq(int x, int y) { return x &lt;= y; }</div><div class="line">static int  add(int x, int y) { return x + y; }</div><div class="line">static int  mul(int x, int y) { return x * y; }</div><div class="line">static int  neg(int x) { return -x; }</div><div class="line">static int  id(int x) { return x; }</div><div class="line"></div><div class="line">int main(void) {</div><div class="line">    ASSERT_IMPLICATION(true &amp;&amp; false, false);</div><div class="line">    ASSERT_BIDIRECTIONAL_IMPLICATION(true, true);</div><div class="line"></div><div class="line">    ASSERT_REFLEXIVE(eq, 3);</div><div class="line">    ASSERT_SYMMETRIC(eq, 4, 5);</div><div class="line">    ASSERT_TRANSITIVE(eq, 6, 7, 8);</div><div class="line"></div><div class="line">    ASSERT_BIJECTIVE(id, id, eq, 123);</div><div class="line">    ASSERT_INVOLUTIVE(neg, eq, 123);</div><div class="line"></div><div class="line">    ASSERT_COMMUTATIVE(add, eq, 1, 2);</div><div class="line">    ASSERT_ASSOCIATIVE(add, eq, 1, 2, 3);</div><div class="line">    ASSERT_DISTRIBUTIVE(mul, add, eq, 1, 2, 3);</div><div class="line"></div><div class="line">    ASSERT_IDEMPOTENT(mul, eq, 1);</div><div class="line"></div><div class="line">    ASSERT_IDENTITY(add, eq, 0, 123);</div><div class="line">    ASSERT_ZERO(mul, eq, 0, 123);</div><div class="line"></div><div class="line">    ASSERT_PREORDER(lesser_eq, 1, 2, 3);</div><div class="line"></div><div class="line">    ASSERT_PARTIAL_ORDER(lesser_eq, eq, 1, 2, 3);</div><div class="line">    ASSERT_STRICT_PARTIAL_ORDER(lesser, 1, 1, 3);</div><div class="line">    ASSERT_TOTAL_ORDER(lesser_eq, eq, 1, 1, 3);</div><div class="line">    ASSERT_STRICT_TOTAL_ORDER(lesser, eq, 1, 1, 3);</div><div class="line">}</div></div><!-- fragment --><p>To install assert-algebraic, just copy <a href="assert_algebraic.h"><code>assert_algebraic.h</code></a> to your code base (or use <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodules</a>) and then <code>#include &lt;<a class="el" href="assert__algebraic_8h.html" title="Algebraic assertions. ">assert_algebraic.h</a>&gt;</code> where necessary.</p>
+<p>[<a href="examples/demo.c"><code>examples/demo.c</code></a>] [ <a href="https://godbolt.org/z/Y377GY">Playground &gt;&gt;</a> ]</p>
+<div class="fragment"><div class="line">#include &lt;assert_algebraic.h&gt;</div><div class="line"></div><div class="line">#include &lt;stdbool.h&gt;</div><div class="line"></div><div class="line">static bool eq(int x, int y) { return x == y; }</div><div class="line">static bool lesser(int x, int y) { return x &lt; y; }</div><div class="line">static bool lesser_eq(int x, int y) { return x &lt;= y; }</div><div class="line">static int  add(int x, int y) { return x + y; }</div><div class="line">static int  mul(int x, int y) { return x * y; }</div><div class="line">static int  neg(int x) { return -x; }</div><div class="line">static int  id(int x) { return x; }</div><div class="line"></div><div class="line">int main(void) {</div><div class="line">    ASSERT_IMPLICATION(true &amp;&amp; false, false);</div><div class="line">    ASSERT_BIDIRECTIONAL_IMPLICATION(true, true);</div><div class="line"></div><div class="line">    ASSERT_REFLEXIVE(eq, 3);</div><div class="line">    ASSERT_SYMMETRIC(eq, 4, 5);</div><div class="line">    ASSERT_TRANSITIVE(eq, 6, 7, 8);</div><div class="line">    ASSERT_EQUIVALENCE(eq, 1, 1, 3);</div><div class="line"></div><div class="line">    ASSERT_BIJECTIVE(id, id, eq, 123);</div><div class="line">    ASSERT_INVOLUTIVE(neg, eq, 123);</div><div class="line"></div><div class="line">    ASSERT_COMMUTATIVE(add, eq, 1, 2);</div><div class="line">    ASSERT_ASSOCIATIVE(add, eq, 1, 2, 3);</div><div class="line">    ASSERT_DISTRIBUTIVE(mul, add, eq, 1, 2, 3);</div><div class="line"></div><div class="line">    ASSERT_IDEMPOTENT(mul, eq, 1);</div><div class="line"></div><div class="line">    ASSERT_IDENTITY(add, eq, 0, 123);</div><div class="line">    ASSERT_ZERO(mul, eq, 0, 123);</div><div class="line"></div><div class="line">    ASSERT_PREORDER(lesser_eq, 1, 2, 3);</div><div class="line"></div><div class="line">    ASSERT_PARTIAL_ORDER(lesser_eq, eq, 1, 2, 3);</div><div class="line">    ASSERT_STRICT_PARTIAL_ORDER(lesser, 1, 1, 3);</div><div class="line">    ASSERT_TOTAL_ORDER(lesser_eq, eq, 1, 1, 3);</div><div class="line">    ASSERT_STRICT_TOTAL_ORDER(lesser, eq, 1, 1, 3);</div><div class="line">}</div></div><!-- fragment --><p>To install assert-algebraic, just copy <a href="assert_algebraic.h"><code>assert_algebraic.h</code></a> to your code base (or use <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodules</a>) and then <code>#include &lt;<a class="el" href="assert__algebraic_8h.html" title="Algebraic assertions. ">assert_algebraic.h</a>&gt;</code> where necessary.</p>
 <h2>Purpose</h2>
 <p>The goal is to implement property-based testing in pure C. (Though this library is not intended as a complete property-based testing framework: test cases generation is not planned, for example.)</p>
 <h2>Available properties</h2>
-<p>To see the macro definitions, go to <a href="assert_algebraic.h"><code>assert_algebraic.h</code></a>.</p>
-<table class="doxtable">
-<tr>
-<th>Macro </th><th>Property  </th></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#ab7cc62c783137ec523e197784a514a11" title="Logical implication: . ">ASSERT_IMPLICATION(x, y)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Logical_consequence">Logical implication</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a1daa2929b1403cd197124832b76d863f" title="Logical equivalence: . ">ASSERT_BIDIRECTIONAL_IMPLICATION(x, y)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Logical_equivalence">Logical equivalence</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#aa961a6265bfa4c3b0a1f342a2bb3c2fd" title="Reflexivity: . ">ASSERT_REFLEXIVE(f, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Reflexive_relation">Reflexivity</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#ab5de32281c427c52c9d5c171d8b5129e" title="Irreflexivity: . ">ASSERT_IRREFLEXIVE(f, eq, x, y)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Reflexive_relation#Related_terms">Irreflexivity</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#ae00a21d1eca14c3a6589bcdb3511f2e3" title="Symmetricity: . ">ASSERT_SYMMETRIC(f, x, y)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Symmetric_relation">Symmetricity</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a0fc70876cb10815a5dc11a4d58b22d34" title="Antisymmetricity: . ">ASSERT_ANTISYMMETRIC(f, eq, x, y)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Antisymmetric_relation">Antisymmetricity</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a9179e3eb83d6195c027fd2dc3facaad0" title="Asymmetricity: . ">ASSERT_ASYMMETRIC(f, eq, x, y)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Asymmetric_relation">Asymmetricity</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#afe86fc683bdb921e3b0df1c638ff495a" title="Bijectivity: . ">ASSERT_BIJECTIVE(f, inverse_f, eq, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Bijection">Bijection</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a94cdda0a4065aab0146a0f808c938733" title="Involutivity: . ">ASSERT_INVOLUTIVE(f, eq, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Involution_(mathematics)">Involution</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a5f64cc9542436e8477f8a72e430b93d6" title="Idempotence: . ">ASSERT_IDEMPOTENT(f, eq, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Idempotence">Idempotence</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#af9eea6723af46e93330de07885d97c97" title="Commutativity: . ">ASSERT_COMMUTATIVE(f, eq, x, y)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Commutative_property">Commutativity</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a08dd15d5b5c0ccdea8159de5074f0447" title="Associativity: . ">ASSERT_ASSOCIATIVE(f, eq, x, y, z)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Associative_property">Associativity</a> </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a3f6c3d0253c3ddf32fbc3fc9d48d59b9" title="Distributivity (left): . ">ASSERT_LEFT_DISTRIBUTIVE(f1, f2, eq, x, y, z)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Distributive_property">Distributivity</a> (left) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a5e88fd35b9a7ea8363e73ea2f40cdfda" title="Distributivity (right): . ">ASSERT_RIGHT_DISTRIBUTIVE(f1, f2, eq, x, y, z)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Distributive_property">Distributivity</a> (right) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#ad72f60f636a145a9b409f4ba1f6de2d4" title="Distributivity (left and right): . ">ASSERT_DISTRIBUTIVE(f1, f2, eq, x, y, z)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Distributive_property">Distributivity</a> (both left and right) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#adcb0b1ffb98a8fdd4287f26d8a3e344b" title="Identity element (left): . ">ASSERT_LEFT_IDENTITY(f, eq, e, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Identity_element">Identity element</a> (left) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#acf729cd92c07044b926ff67353ecbd38" title="Identity element (right): . ">ASSERT_RIGHT_IDENTITY(f, eq, e, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Identity_element">Identity element</a> (right) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#af1bad3d05e66f6b84e2f4ceb19e14f38" title="Identity element (left and right): . ">ASSERT_IDENTITY(f, eq, e, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Identity_element">Identity element</a> (both left and right) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#afa4666f471a185d0a472d5bcde5ddf08" title="Zero element (left): . ">ASSERT_LEFT_ZERO(f, eq, z, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Absorbing_element">Zero element</a> (left) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#abbdbe466ab679f1ab4eb84143f360302" title="Zero element (left): . ">ASSERT_RIGHT_ZERO(f, eq, z, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Absorbing_element">Zero element</a> (right) </td></tr>
-<tr>
-<td><code><a class="el" href="assert__algebraic_8h.html#a522f82d8de0bb831f6c1510fcf34e9de" title="Zero element (left and right): . ">ASSERT_ZERO(f, eq, z, x)</a></code> </td><td><a href="https://en.wikipedia.org/wiki/Absorbing_element">Zero element</a> (both left and right) </td></tr>
-</table>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Logical_consequence">Logical implication</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Logical_equivalence">Logical equivalence</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reflexive_relation">Reflexivity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Reflexive_relation#Related_terms">Irreflexivity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Symmetric_relation">Symmetricity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Antisymmetric_relation">Antisymmetricity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Asymmetric_relation">Asymmetricity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Transitive_relation">Transitivity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Intransitivity#Antitransitivity">Antitransitivity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Connex_relation">Connexity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Connex_relation">Semiconnexity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Bijection">Bijectivity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Involution_(mathematics)">Involutivity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Idempotence">~~Impotence~~ Idempotence</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Commutative_property">Commutativity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Associative_property">Associativity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Distributive_property">Distributivity</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Identity_element">Identity element</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Absorbing_element">Zero element</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Preorder">Preorder</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Partially_ordered_set#Formal_definition">Partial order</a> (strict and non-strict)</li>
+<li><a href="https://en.wikipedia.org/wiki/Total_order">Total order</a> (strict and non-strict)</li>
+</ul>
 <h2>Projects using assert-algebraic</h2>
 <ul>
 <li><a href="https://github.com/Hirrolot/slice99">Hirrolot/slice99</a> &ndash; Array slicing for C99. </li>

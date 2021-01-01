@@ -38,6 +38,7 @@ int main(void) {
     ASSERT_REFLEXIVE(eq, 3);
     ASSERT_SYMMETRIC(eq, 4, 5);
     ASSERT_TRANSITIVE(eq, 6, 7, 8);
+    ASSERT_EQUIVALENCE(eq, 1, 1, 3);
 
     ASSERT_BIJECTIVE(id, id, eq, 123);
     ASSERT_INVOLUTIVE(neg, eq, 123);

@@ -161,6 +161,9 @@ Macros</h2></td></tr>
 <tr class="memitem:ad72f60f636a145a9b409f4ba1f6de2d4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assert__algebraic_8h.html#ad72f60f636a145a9b409f4ba1f6de2d4">ASSERT_DISTRIBUTIVE</a>(f1,  f2,  eq,  x,  y,  z)</td></tr>
 <tr class="memdesc:ad72f60f636a145a9b409f4ba1f6de2d4"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://en.wikipedia.org/wiki/Distributive_property">Distributivity (left and right)</a>: \(f1(x, f2(y, z)) = f2(f1(x, y), f1(x, z)) \land f1(f2(y, z), x) = f2(f1(y, x), f1(z, x))\).  <a href="#ad72f60f636a145a9b409f4ba1f6de2d4">More...</a><br /></td></tr>
 <tr class="separator:ad72f60f636a145a9b409f4ba1f6de2d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2a2af7775349b1c503683ae48ca0e44f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assert__algebraic_8h.html#a2a2af7775349b1c503683ae48ca0e44f">ASSERT_EQUIVALENCE</a>(f,  x,  y,  z)</td></tr>
+<tr class="memdesc:a2a2af7775349b1c503683ae48ca0e44f"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://en.wikipedia.org/wiki/Equivalence_relation">Equivalence</a>: a relation that is reflexive, symmetric, and transitive.  <a href="#a2a2af7775349b1c503683ae48ca0e44f">More...</a><br /></td></tr>
+<tr class="separator:a2a2af7775349b1c503683ae48ca0e44f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adcb0b1ffb98a8fdd4287f26d8a3e344b"><td class="memItemLeft" align="right" valign="top"><a id="adcb0b1ffb98a8fdd4287f26d8a3e344b"></a>
 #define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="assert__algebraic_8h.html#adcb0b1ffb98a8fdd4287f26d8a3e344b">ASSERT_LEFT_IDENTITY</a>(f,  eq,  e,  x)&#160;&#160;&#160;assert(eq(f(e, x), x))</td></tr>
 <tr class="memdesc:adcb0b1ffb98a8fdd4287f26d8a3e344b"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a href="https://en.wikipedia.org/wiki/Identity_element">Identity element (left)</a>: \(f(e, x) = x\). <br /></td></tr>
@@ -288,6 +291,49 @@ Macros</h2></td></tr>
 
 </div>
 </div>
+<a id="a2a2af7775349b1c503683ae48ca0e44f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2a2af7775349b1c503683ae48ca0e44f">&#9670;&nbsp;</a></span>ASSERT_EQUIVALENCE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ASSERT_EQUIVALENCE</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">f, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">x, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">y, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">z&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#aa961a6265bfa4c3b0a1f342a2bb3c2fd">ASSERT_REFLEXIVE</a>(f, x);                                                                        \</div><div class="line">    ASSERT_SYMMETRIC(f, x, y);                                                                     \</div><div class="line">    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_aa961a6265bfa4c3b0a1f342a2bb3c2fd"><div class="ttname"><a href="assert__algebraic_8h.html#aa961a6265bfa4c3b0a1f342a2bb3c2fd">ASSERT_REFLEXIVE</a></div><div class="ttdeci">#define ASSERT_REFLEXIVE(f, x)</div><div class="ttdoc">Reflexivity: . </div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:67</div></div>
+</div><!-- fragment -->
+<p><a href="https://en.wikipedia.org/wiki/Equivalence_relation">Equivalence</a>: a relation that is reflexive, symmetric, and transitive. </p>
+
+</div>
+</div>
 <a id="af1bad3d05e66f6b84e2f4ceb19e14f38"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af1bad3d05e66f6b84e2f4ceb19e14f38">&#9670;&nbsp;</a></span>ASSERT_IDENTITY</h2>
 
@@ -325,7 +371,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#adcb0b1ffb98a8fdd4287f26d8a3e344b">ASSERT_LEFT_IDENTITY</a>(f, eq, e, x);                                                             \</div><div class="line">    ASSERT_RIGHT_IDENTITY(f, eq, e, x);                                                            \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_adcb0b1ffb98a8fdd4287f26d8a3e344b"><div class="ttname"><a href="assert__algebraic_8h.html#adcb0b1ffb98a8fdd4287f26d8a3e344b">ASSERT_LEFT_IDENTITY</a></div><div class="ttdeci">#define ASSERT_LEFT_IDENTITY(f, eq, e, x)</div><div class="ttdoc">Identity element (left): . </div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:175</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#adcb0b1ffb98a8fdd4287f26d8a3e344b">ASSERT_LEFT_IDENTITY</a>(f, eq, e, x);                                                             \</div><div class="line">    ASSERT_RIGHT_IDENTITY(f, eq, e, x);                                                            \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_adcb0b1ffb98a8fdd4287f26d8a3e344b"><div class="ttname"><a href="assert__algebraic_8h.html#adcb0b1ffb98a8fdd4287f26d8a3e344b">ASSERT_LEFT_IDENTITY</a></div><div class="ttdeci">#define ASSERT_LEFT_IDENTITY(f, eq, e, x)</div><div class="ttdoc">Identity element (left): . </div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:187</div></div>
 </div><!-- fragment -->
 <p><a href="https://en.wikipedia.org/wiki/Identity_element">Identity element (left and right)</a>: \(f(e, x) = f(x, e) = e\). </p>
 
@@ -404,7 +450,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#a1ac1da5a035783a9284f051f0f0d6c89">ASSERT_PREORDER</a>(f, x, y, z);                                                                   \</div><div class="line">    ASSERT_ANTISYMMETRIC(f, eq, x, y);                                                             \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_a1ac1da5a035783a9284f051f0f0d6c89"><div class="ttname"><a href="assert__algebraic_8h.html#a1ac1da5a035783a9284f051f0f0d6c89">ASSERT_PREORDER</a></div><div class="ttdeci">#define ASSERT_PREORDER(f, x, y, z)</div><div class="ttdoc">Preorder: a relation that is reflexive and transitive. </div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:221</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#a1ac1da5a035783a9284f051f0f0d6c89">ASSERT_PREORDER</a>(f, x, y, z);                                                                   \</div><div class="line">    ASSERT_ANTISYMMETRIC(f, eq, x, y);                                                             \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_a1ac1da5a035783a9284f051f0f0d6c89"><div class="ttname"><a href="assert__algebraic_8h.html#a1ac1da5a035783a9284f051f0f0d6c89">ASSERT_PREORDER</a></div><div class="ttdeci">#define ASSERT_PREORDER(f, x, y, z)</div><div class="ttdoc">Preorder: a relation that is reflexive and transitive. </div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:233</div></div>
 </div><!-- fragment -->
 <p><a href="https://en.wikipedia.org/wiki/Partially_ordered_set#Formal_definition">Non-strict partial order</a>: an antisymmetric preorder. </p>
 
@@ -539,7 +585,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#a53e2d3db82c39727801ff0b741df90d4">ASSERT_STRICT_PARTIAL_ORDER</a>(f, x, y, z);                                                       \</div><div class="line">    ASSERT_SEMICONNEXIVE(f, eq, x, y);                                                             \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_a53e2d3db82c39727801ff0b741df90d4"><div class="ttname"><a href="assert__algebraic_8h.html#a53e2d3db82c39727801ff0b741df90d4">ASSERT_STRICT_PARTIAL_ORDER</a></div><div class="ttdeci">#define ASSERT_STRICT_PARTIAL_ORDER(f, x, y, z)</div><div class="ttdoc">Strict partial order: A relation that is irreflexive (implied by asymmetricity), transitive and asymm...</div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:245</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#a53e2d3db82c39727801ff0b741df90d4">ASSERT_STRICT_PARTIAL_ORDER</a>(f, x, y, z);                                                       \</div><div class="line">    ASSERT_SEMICONNEXIVE(f, eq, x, y);                                                             \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_a53e2d3db82c39727801ff0b741df90d4"><div class="ttname"><a href="assert__algebraic_8h.html#a53e2d3db82c39727801ff0b741df90d4">ASSERT_STRICT_PARTIAL_ORDER</a></div><div class="ttdeci">#define ASSERT_STRICT_PARTIAL_ORDER(f, x, y, z)</div><div class="ttdoc">Strict partial order: A relation that is irreflexive (implied by asymmetricity), transitive and asymm...</div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:257</div></div>
 </div><!-- fragment -->
 <p><a href="https://en.wikipedia.org/wiki/Total_order#Strict_total_order">Strict total order</a>: a non-strict total order for which exactly one of \(f(x, y)\), \(f(y, x)\), and \(x = y\) holds. </p>
 
@@ -631,7 +677,7 @@ Macros</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#afa4666f471a185d0a472d5bcde5ddf08">ASSERT_LEFT_ZERO</a>(f, eq, z, x);                                                                 \</div><div class="line">    ASSERT_RIGHT_ZERO(f, eq, z, x);                                                                \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_afa4666f471a185d0a472d5bcde5ddf08"><div class="ttname"><a href="assert__algebraic_8h.html#afa4666f471a185d0a472d5bcde5ddf08">ASSERT_LEFT_ZERO</a></div><div class="ttdeci">#define ASSERT_LEFT_ZERO(f, eq, z, x)</div><div class="ttdoc">Zero element (left): . </div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:198</div></div>
+<b>Value:</b><div class="fragment"><div class="line"><a class="code" href="assert__algebraic_8h.html#afa4666f471a185d0a472d5bcde5ddf08">ASSERT_LEFT_ZERO</a>(f, eq, z, x);                                                                 \</div><div class="line">    ASSERT_RIGHT_ZERO(f, eq, z, x);                                                                \</div><div class="line">                                                                                                   \</div><div class="line">    do {                                                                                           \</div><div class="line">    } <span class="keywordflow">while</span> (0)</div><div class="ttc" id="assert__algebraic_8h_html_afa4666f471a185d0a472d5bcde5ddf08"><div class="ttname"><a href="assert__algebraic_8h.html#afa4666f471a185d0a472d5bcde5ddf08">ASSERT_LEFT_ZERO</a></div><div class="ttdeci">#define ASSERT_LEFT_ZERO(f, eq, z, x)</div><div class="ttdoc">Zero element (left): . </div><div class="ttdef"><b>Definition:</b> assert_algebraic.h:210</div></div>
 </div><!-- fragment -->
 <p><a href="https://en.wikipedia.org/wiki/Absorbing_element">Zero element (left and right)</a>: \(f(z, x) = f(x, z) = z\). </p>
 
