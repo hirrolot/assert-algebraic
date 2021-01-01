@@ -7,3 +7,5 @@ AlwaysBreakBeforeMultilineStrings: true
 AllowShortFunctionsOnASingleLine: Empty
 AlignAfterOpenBracket: AlwaysBreak
 ContinuationIndentWidth: 4
+AllowShortFunctionsOnASingleLine: All
+AlignConsecutiveDeclarations: true
