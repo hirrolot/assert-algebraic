@@ -68,6 +68,7 @@ The goal is to implement property-based testing in pure C. (Though this library 
  - [Asymmetricity](https://en.wikipedia.org/wiki/Asymmetric_relation)
  - [Transitivity](https://en.wikipedia.org/wiki/Transitive_relation)
  - [Antitransitivity](https://en.wikipedia.org/wiki/Intransitivity#Antitransitivity)
+ - [Equivalence](https://en.wikipedia.org/wiki/Equivalence_relation)
  - [Connexity](https://en.wikipedia.org/wiki/Connex_relation)
  - [Semiconnexity](https://en.wikipedia.org/wiki/Connex_relation)
  - [Bijectivity](https://en.wikipedia.org/wiki/Bijection)
