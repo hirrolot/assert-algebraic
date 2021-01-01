@@ -58,31 +58,28 @@ The goal is to implement property-based testing in pure C. (Though this library 
 
 ## Available properties
 
-To see the macro definitions, go to [ `assert_algebraic.h` ].
-
-| Macro | Property |
-|----------|----------|
-| `ASSERT_IMPLICATION(x, y)` | [Logical implication](https://en.wikipedia.org/wiki/Logical_consequence) |
-| `ASSERT_BIDIRECTIONAL_IMPLICATION(x, y)` | [Logical equivalence](https://en.wikipedia.org/wiki/Logical_equivalence) |
-| `ASSERT_REFLEXIVE(f, x)` | [Reflexivity](https://en.wikipedia.org/wiki/Reflexive_relation) |
-| `ASSERT_IRREFLEXIVE(f, eq, x, y)` | [Irreflexivity](https://en.wikipedia.org/wiki/Reflexive_relation#Related_terms) |
-| `ASSERT_SYMMETRIC(f, x, y)` | [Symmetricity](https://en.wikipedia.org/wiki/Symmetric_relation) |
-| `ASSERT_ANTISYMMETRIC(f, eq, x, y)` | [Antisymmetricity](https://en.wikipedia.org/wiki/Antisymmetric_relation) |
-| `ASSERT_ASYMMETRIC(f, eq, x, y)` | [Asymmetricity](https://en.wikipedia.org/wiki/Asymmetric_relation) |
-| `ASSERT_BIJECTIVE(f, inverse_f, eq, x)` | [Bijection](https://en.wikipedia.org/wiki/Bijection) |
-| `ASSERT_INVOLUTIVE(f, eq, x)` | [Involution](https://en.wikipedia.org/wiki/Involution_(mathematics)) |
-| `ASSERT_IDEMPOTENT(f, eq, x)` | [~~Impotence~~ Idempotence](https://en.wikipedia.org/wiki/Idempotence) |
-| `ASSERT_COMMUTATIVE(f, eq, x, y)` | [Commutativity](https://en.wikipedia.org/wiki/Commutative_property) |
-| `ASSERT_ASSOCIATIVE(f, eq, x, y, z)` | [Associativity](https://en.wikipedia.org/wiki/Associative_property) |
-| `ASSERT_LEFT_DISTRIBUTIVE(f1, f2, eq, x, y, z)` | [Distributivity](https://en.wikipedia.org/wiki/Distributive_property) (left) |
-| `ASSERT_RIGHT_DISTRIBUTIVE(f1, f2, eq, x, y, z)` | [Distributivity](https://en.wikipedia.org/wiki/Distributive_property) (right)  |
-| `ASSERT_DISTRIBUTIVE(f1, f2, eq, x, y, z)` | [Distributivity](https://en.wikipedia.org/wiki/Distributive_property) (both left and right) |
-| `ASSERT_LEFT_IDENTITY(f, eq, e, x)` | [Identity element](https://en.wikipedia.org/wiki/Identity_element) (left) |
-| `ASSERT_RIGHT_IDENTITY(f, eq, e, x)` | [Identity element](https://en.wikipedia.org/wiki/Identity_element) (right) |
-| `ASSERT_IDENTITY(f, eq, e, x)` | [Identity element](https://en.wikipedia.org/wiki/Identity_element) (both left and right) |
-| `ASSERT_LEFT_ZERO(f, eq, z, x)` | [Zero element](https://en.wikipedia.org/wiki/Absorbing_element) (left) |
-| `ASSERT_RIGHT_ZERO(f, eq, z, x)` | [Zero element](https://en.wikipedia.org/wiki/Absorbing_element) (right) |
-| `ASSERT_ZERO(f, eq, z, x)` | [Zero element](https://en.wikipedia.org/wiki/Absorbing_element) (both left and right) |
+ - [Logical implication](https://en.wikipedia.org/wiki/Logical_consequence)
+ - [Logical equivalence](https://en.wikipedia.org/wiki/Logical_equivalence)
+ - [Reflexivity](https://en.wikipedia.org/wiki/Reflexive_relation)
+ - [Irreflexivity](https://en.wikipedia.org/wiki/Reflexive_relation#Related_terms)
+ - [Symmetricity](https://en.wikipedia.org/wiki/Symmetric_relation)
+ - [Antisymmetricity](https://en.wikipedia.org/wiki/Antisymmetric_relation)
+ - [Asymmetricity](https://en.wikipedia.org/wiki/Asymmetric_relation)
+ - [Transitivity](https://en.wikipedia.org/wiki/Transitive_relation)
+ - [Antitransitivity](https://en.wikipedia.org/wiki/Intransitivity#Antitransitivity)
+ - [Connexity](https://en.wikipedia.org/wiki/Connex_relation)
+ - [Semiconnexity](https://en.wikipedia.org/wiki/Connex_relation)
+ - [Bijectivity](https://en.wikipedia.org/wiki/Bijection)
+ - [Involutivity](https://en.wikipedia.org/wiki/Involution_(mathematics))
+ - [~~Impotence~~ Idempotence](https://en.wikipedia.org/wiki/Idempotence)
+ - [Commutativity](https://en.wikipedia.org/wiki/Commutative_property)
+ - [Associativity](https://en.wikipedia.org/wiki/Associative_property)
+ - [Distributivity](https://en.wikipedia.org/wiki/Distributive_property)
+ - [Identity element](https://en.wikipedia.org/wiki/Identity_element)
+ - [Zero element](https://en.wikipedia.org/wiki/Absorbing_element)
+ - [Preorder](https://en.wikipedia.org/wiki/Preorder)
+ - [Partial order](https://en.wikipedia.org/wiki/Partially_ordered_set#Formal_definition) (strict and non-strict)
+ - [Total order](https://en.wikipedia.org/wiki/Total_order) (strict and non-strict)
 
 ## Projects using assert-algebraic
 
