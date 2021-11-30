@@ -6,6 +6,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## unreleased
 
+### Added
+
+ - Make complete C statements out of macros using `do { ... } while (0)`.
+
 ## 0.1.1 - 2020-01-02
 
 ### Added

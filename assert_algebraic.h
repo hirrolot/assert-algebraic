@@ -46,11 +46,10 @@ SOFTWARE.
  * \Rightarrow y\f$.
  */
 #define ASSERT_IMPLICATION(x, y)                                                                   \
-    if (x) {                                                                                       \
-        assert(y);                                                                                 \
-    }                                                                                              \
-                                                                                                   \
     do {                                                                                           \
+        if (x) {                                                                                   \
+            assert(y);                                                                             \
+        }                                                                                          \
     } while (0)
 
 /**
@@ -58,10 +57,9 @@ SOFTWARE.
  * \Leftrightarrow y\f$.
  */
 #define ASSERT_BIDIRECTIONAL_IMPLICATION(x, y)                                                     \
-    ASSERT_IMPLICATION(x, y);                                                                      \
-    ASSERT_IMPLICATION(y, x);                                                                      \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_IMPLICATION(x, y);                                                                  \
+        ASSERT_IMPLICATION(y, x);                                                                  \
     } while (0)
 
 /**
@@ -165,10 +163,9 @@ SOFTWARE.
  * f1(z, x))\f$.
  */
 #define ASSERT_DISTRIBUTIVE(f1, f2, eq, x, y, z)                                                   \
-    ASSERT_LEFT_DISTRIBUTIVE(f1, f2, eq, x, y, z);                                                 \
-    ASSERT_RIGHT_DISTRIBUTIVE(f1, f2, eq, x, y, z);                                                \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_LEFT_DISTRIBUTIVE(f1, f2, eq, x, y, z);                                             \
+        ASSERT_RIGHT_DISTRIBUTIVE(f1, f2, eq, x, y, z);                                            \
     } while (0)
 
 /**
@@ -176,11 +173,10 @@ SOFTWARE.
  * reflexive, symmetric, and transitive.
  */
 #define ASSERT_EQUIVALENCE(f, x, y, z)                                                             \
-    ASSERT_REFLEXIVE(f, x);                                                                        \
-    ASSERT_SYMMETRIC(f, x, y);                                                                     \
-    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_REFLEXIVE(f, x);                                                                    \
+        ASSERT_SYMMETRIC(f, x, y);                                                                 \
+        ASSERT_TRANSITIVE(f, x, y, z);                                                             \
     } while (0)
 
 /**
@@ -200,10 +196,9 @@ SOFTWARE.
  * \f$f(e, x) = f(x, e) = e\f$.
  */
 #define ASSERT_IDENTITY(f, eq, e, x)                                                               \
-    ASSERT_LEFT_IDENTITY(f, eq, e, x);                                                             \
-    ASSERT_RIGHT_IDENTITY(f, eq, e, x);                                                            \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_LEFT_IDENTITY(f, eq, e, x);                                                         \
+        ASSERT_RIGHT_IDENTITY(f, eq, e, x);                                                        \
     } while (0)
 
 /**
@@ -223,10 +218,9 @@ SOFTWARE.
  * \f$f(z, x) = f(x, z) = z\f$.
  */
 #define ASSERT_ZERO(f, eq, z, x)                                                                   \
-    ASSERT_LEFT_ZERO(f, eq, z, x);                                                                 \
-    ASSERT_RIGHT_ZERO(f, eq, z, x);                                                                \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_LEFT_ZERO(f, eq, z, x);                                                             \
+        ASSERT_RIGHT_ZERO(f, eq, z, x);                                                            \
     } while (0)
 
 /**
@@ -234,10 +228,9 @@ SOFTWARE.
  * transitive.
  */
 #define ASSERT_PREORDER(f, x, y, z)                                                                \
-    ASSERT_REFLEXIVE(f, x);                                                                        \
-    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_REFLEXIVE(f, x);                                                                    \
+        ASSERT_TRANSITIVE(f, x, y, z);                                                             \
     } while (0)
 
 /**
@@ -245,10 +238,9 @@ SOFTWARE.
  * partial order</a>: an antisymmetric preorder.
  */
 #define ASSERT_PARTIAL_ORDER(f, eq, x, y, z)                                                       \
-    ASSERT_PREORDER(f, x, y, z);                                                                   \
-    ASSERT_ANTISYMMETRIC(f, eq, x, y);                                                             \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_PREORDER(f, x, y, z);                                                               \
+        ASSERT_ANTISYMMETRIC(f, eq, x, y);                                                         \
     } while (0)
 
 /**
@@ -258,10 +250,9 @@ SOFTWARE.
  * asymmetric.
  */
 #define ASSERT_STRICT_PARTIAL_ORDER(f, x, y, z)                                                    \
-    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \
-    ASSERT_ASYMMETRIC(f, x, y);                                                                    \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_TRANSITIVE(f, x, y, z);                                                             \
+        ASSERT_ASYMMETRIC(f, x, y);                                                                \
     } while (0)
 
 /**
@@ -269,11 +260,10 @@ SOFTWARE.
  * is antisymmetric, transitive, and connexive.
  */
 #define ASSERT_TOTAL_ORDER(f, eq, x, y, z)                                                         \
-    ASSERT_ANTISYMMETRIC(f, eq, x, y);                                                             \
-    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \
-    ASSERT_CONNEXIVE(f, x, y);                                                                     \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_ANTISYMMETRIC(f, eq, x, y);                                                         \
+        ASSERT_TRANSITIVE(f, x, y, z);                                                             \
+        ASSERT_CONNEXIVE(f, x, y);                                                                 \
     } while (0)
 
 /**
@@ -281,11 +271,10 @@ SOFTWARE.
  * asymmetric (hence irreflexive) transitive semiconnex relation.
  */
 #define ASSERT_STRICT_TOTAL_ORDER(f, eq, x, y, z)                                                  \
-    ASSERT_ASYMMETRIC(f, x, y);                                                                    \
-    ASSERT_TRANSITIVE(f, x, y, z);                                                                 \
-    ASSERT_SEMICONNEXIVE(f, eq, x, y);                                                             \
-                                                                                                   \
     do {                                                                                           \
+        ASSERT_ASYMMETRIC(f, x, y);                                                                \
+        ASSERT_TRANSITIVE(f, x, y, z);                                                             \
+        ASSERT_SEMICONNEXIVE(f, eq, x, y);                                                         \
     } while (0)
 
 #endif // ASSERT_ALGEBRAIC_H
