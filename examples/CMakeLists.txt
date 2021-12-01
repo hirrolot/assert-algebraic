@@ -12,11 +12,11 @@ endif()
 add_executable(demo demo.c)
 
 get_property(
-  TESTS
+  EXAMPLES
   DIRECTORY .
   PROPERTY BUILDSYSTEM_TARGETS)
 
-foreach(TARGET ${TESTS})
+foreach(TARGET ${EXAMPLES})
   target_link_libraries(${TARGET} assert-algebraic)
   set_target_properties(${TARGET} PROPERTIES C_STANDARD 99 C_STANDARD_REQUIRED
                                                            ON)
