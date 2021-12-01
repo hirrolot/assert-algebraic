@@ -88,3 +88,12 @@ The goal is to implement property-based testing in pure C. (Though this library 
  - [Hirrolot/slice99](https://github.com/Hirrolot/slice99) -- Array slicing for C99.
 
 [ `assert_algebraic.h` ]: assert_algebraic.h
+
+## Release procedure
+
+ 1. Update the `PROJECT_NUMBER` field in `Doxyfile`.
+ 2. Run `doxygen` to generate the newest docs.
+ 3. Update `CHANGELOG.md`.
+ 4. Release the project in [GitHub Releases].
+
+[GitHub Releases]: https://github.com/Hirrolot/slice99/releases

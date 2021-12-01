@@ -30,7 +30,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">assert-algebraic
-   &#160;<span id="projectnumber">0.1.1</span>
+   &#160;<span id="projectnumber">0.2.0</span>
    </div>
    <div id="projectbrief">Asserting algebraic properties of C functions</div>
   </td>
@@ -74,7 +74,17 @@ $(function() {
 <div class="contents">
 <div class="textblock"><p>All notable changes to this project will be documented in this file.</p>
 <p>The format is based on <a href="https://keepachangelog.com/en/1.0.0/">Keep a Changelog</a>, and this project adheres to <a href="https://semver.org/spec/v2.0.0.html">Semantic Versioning</a>.</p>
-<h2>[0.1.1] - 2020-01-02</h2>
+<h2>unreleased</h2>
+<h2>0.2.0 - 2021-12-01</h2>
+<h3>Added</h3>
+<ul>
+<li>Add the root <code>CMakeLists.txt</code> to be able to use CMake with <a href="https://cmake.org/cmake/help/latest/module/FetchContent.html"><code>FetchContent</code></a> or <a href="https://cmake.org/cmake/help/latest/command/add_subdirectory.html"><code>add_subdirectory</code></a>.</li>
+</ul>
+<h3>Changed</h3>
+<ul>
+<li>Make complete C statements out of macros using <code>do { ... } while (0)</code> [<b>BC</b>].</li>
+</ul>
+<h2>0.1.1 - 2020-01-02</h2>
 <h3>Added</h3>
 <ul>
 <li><code>ASSERT_EQUIVALENCE</code>.</li>
@@ -90,7 +100,7 @@ $(function() {
 <li><code>ASSERT_TOTAL_ORDER</code>.</li>
 <li><code>ASSERT_STRICT_TOTAL_ORDER</code>.</li>
 </ul>
-<h2>[0.1.0] - 2020-12-29</h2>
+<h2>0.1.0- 2020-12-29</h2>
 <h3>Added</h3>
 <ul>
 <li>This excellent project. </li>
