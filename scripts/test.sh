@@ -1,6 +1,5 @@
 #!/bin/bash
 
-# Check the examples.
 mkdir -p examples/build
 cd examples/build
 cmake ..
