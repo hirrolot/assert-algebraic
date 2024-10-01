@@ -1,6 +1,6 @@
 # assert-algebraic
 
-[![CI](https://github.com/Hirrolot/assert-algebraic/workflows/C/C++%20CI/badge.svg)](https://github.com/Hirrolot/assert-algebraic/actions)
+[![CI](https://github.com/hirrolot/assert-algebraic/workflows/C/C++%20CI/badge.svg)](https://github.com/hirrolot/assert-algebraic/actions)
 
 A set of macros to dynamically assert certain algebraic properties of regular C functions.
 
@@ -85,7 +85,7 @@ The goal is to implement property-based testing in pure C. (Though this library 
 
 ## Projects using assert-algebraic
 
- - [Hirrolot/slice99](https://github.com/Hirrolot/slice99) -- Array slicing for C99.
+ - [hirrolot/slice99](https://github.com/hirrolot/slice99) -- Array slicing for C99.
 
 [ `assert_algebraic.h` ]: assert_algebraic.h
 
@@ -96,4 +96,4 @@ The goal is to implement property-based testing in pure C. (Though this library 
  3. Update `CHANGELOG.md`.
  4. Release the project in [GitHub Releases].
 
-[GitHub Releases]: https://github.com/Hirrolot/slice99/releases
+[GitHub Releases]: https://github.com/hirrolot/slice99/releases

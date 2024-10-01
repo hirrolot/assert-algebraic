@@ -1,7 +1,7 @@
 /*
 MIT License
 
-Copyright (c) 2020-2024 Hirrolot
+Copyright (c) 2020-2024 hirrolot
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -27,7 +27,7 @@ SOFTWARE.
  * A set of macros to dynamically assert certain algebraic properties of regular C functions.<br>
  *
  * All the documentation is located in assert_algebraic.h. See <a
- * href="https://github.com/Hirrolot/assert-algebraic">our official GitHub repository</a> for a
+ * href="https://github.com/hirrolot/assert-algebraic">our official GitHub repository</a> for a
  * high-level overview.
  */
 

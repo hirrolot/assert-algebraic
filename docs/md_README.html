@@ -72,7 +72,7 @@ $(function() {
 <div class="title">assert-algebraic </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p><a href="https://github.com/Hirrolot/assert-algebraic/actions"></a></p>
+<div class="textblock"><p><a href="https://github.com/hirrolot/assert-algebraic/actions"></a></p>
 <p>A set of macros to dynamically assert certain algebraic properties of regular C functions.</p>
 <p>[<a href="examples/demo.c"><code>examples/demo.c</code></a>] [ <a href="https://godbolt.org/z/Y377GY">Playground &gt;&gt;</a> ]</p>
 <div class="fragment"><div class="line">#include &lt;assert_algebraic.h&gt;</div><div class="line"></div><div class="line">#include &lt;stdbool.h&gt;</div><div class="line"></div><div class="line">static bool eq(int x, int y) { return x == y; }</div><div class="line">static bool lesser(int x, int y) { return x &lt; y; }</div><div class="line">static bool lesser_eq(int x, int y) { return x &lt;= y; }</div><div class="line">static int  add(int x, int y) { return x + y; }</div><div class="line">static int  mul(int x, int y) { return x * y; }</div><div class="line">static int  neg(int x) { return -x; }</div><div class="line">static int  id(int x) { return x; }</div><div class="line"></div><div class="line">int main(void) {</div><div class="line">    ASSERT_IMPLICATION(true &amp;&amp; false, false);</div><div class="line">    ASSERT_BIDIRECTIONAL_IMPLICATION(true, true);</div><div class="line"></div><div class="line">    ASSERT_REFLEXIVE(eq, 3);</div><div class="line">    ASSERT_SYMMETRIC(eq, 4, 5);</div><div class="line">    ASSERT_TRANSITIVE(eq, 6, 7, 8);</div><div class="line">    ASSERT_EQUIVALENCE(eq, 1, 1, 3);</div><div class="line"></div><div class="line">    ASSERT_BIJECTIVE(id, id, eq, 123);</div><div class="line">    ASSERT_INVOLUTIVE(neg, eq, 123);</div><div class="line"></div><div class="line">    ASSERT_COMMUTATIVE(add, eq, 1, 2);</div><div class="line">    ASSERT_ASSOCIATIVE(add, eq, 1, 2, 3);</div><div class="line">    ASSERT_DISTRIBUTIVE(mul, add, eq, 1, 2, 3);</div><div class="line"></div><div class="line">    ASSERT_IDEMPOTENT(mul, eq, 1);</div><div class="line"></div><div class="line">    ASSERT_IDENTITY(add, eq, 0, 123);</div><div class="line">    ASSERT_ZERO(mul, eq, 0, 123);</div><div class="line"></div><div class="line">    ASSERT_PREORDER(lesser_eq, 1, 2, 3);</div><div class="line"></div><div class="line">    ASSERT_PARTIAL_ORDER(lesser_eq, eq, 1, 2, 3);</div><div class="line">    ASSERT_STRICT_PARTIAL_ORDER(lesser, 1, 1, 3);</div><div class="line">    ASSERT_TOTAL_ORDER(lesser_eq, eq, 1, 1, 3);</div><div class="line">    ASSERT_STRICT_TOTAL_ORDER(lesser, eq, 1, 1, 3);</div><div class="line">}</div></div><!-- fragment --><p>To install assert-algebraic, just copy <a href="assert_algebraic.h"><code>assert_algebraic.h</code></a> to your code base (or use <a href="https://git-scm.com/book/en/v2/Git-Tools-Submodules">Git submodules</a>) and then <code>#include &lt;<a class="el" href="assert__algebraic_8h.html" title="Algebraic assertions. ">assert_algebraic.h</a>&gt;</code> where necessary.</p>
@@ -106,7 +106,7 @@ $(function() {
 </ul>
 <h2>Projects using assert-algebraic</h2>
 <ul>
-<li><a href="https://github.com/Hirrolot/slice99">Hirrolot/slice99</a> &ndash; Array slicing for C99. </li>
+<li><a href="https://github.com/hirrolot/slice99">hirrolot/slice99</a> &ndash; Array slicing for C99. </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
